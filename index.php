@@ -1,5 +1,8 @@
 <?php
     namespace Tutoriel;
+
+    use Tutoriel\Test\MyTest;
+
     require "class/Autoloader.php";
     Autoloader::register();
 ?>
@@ -18,6 +21,10 @@
             "username"=>"Jordan",
             "password"=>"test"
         ]);
+
+        $test = new MyTest("Jordan");
+
+        $test->presentation();
 
         echo $form->input('username');
         echo $form->input('password','password');
